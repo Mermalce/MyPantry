@@ -1,0 +1,1 @@
+web: gunicorn MyPantry.wsgi --log-file -
