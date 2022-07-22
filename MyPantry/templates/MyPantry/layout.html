@@ -2,10 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>MyPantry</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'MyPantry/css/layout.css' %}">
 </head>
 <body>
-
+  <header>
+    <div>MyPantry</div>
+    <nav>
+      <a href="">Home</a>
+      <a href="{% url 'MyPantry:inventario' %}">Inventário</a>
+    </nav>
+  </header>
 <main>
 	{% block main %}
 	{% endblock main %}

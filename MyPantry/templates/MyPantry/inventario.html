@@ -1,0 +1,27 @@
+{% extends 'MyPantry/layout.html' %}
+
+{% block main %}
+	<h3>Inventário</h3>
+
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Quantidade</th>
+            <th>Data</th>
+            <th>Descrição</th>
+            <th>Local</th>
+            <th>Categoria</th>
+        </tr>
+        {% for item in items %}
+            <tr>
+                <th>{{item.nome}}</th>
+                <th>{{item.quantidade}}</th>
+                <th>{{item.data}}</th>
+                <th>{{item.descricao}}</th>
+                <th>{{item.local}}</th>
+                <th>{{item.categoria}}</th>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
